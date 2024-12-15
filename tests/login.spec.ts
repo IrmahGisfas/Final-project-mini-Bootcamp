@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 import { faker } from "@faker-js/faker";
-import { LoginPage } from "../page/loginPage";
+import { LoginPage } from "../pages/loginPage";
 
 test.describe("Create Account & Login Test Case", () => {
   let firstName = faker.person.firstName();
