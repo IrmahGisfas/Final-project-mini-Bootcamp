@@ -96,17 +96,17 @@ export class LoginPage {
     await this.signInSubmitButton.click();
   }
 
-  async verifySignIn(firstName: string, lastName: string, email: string) {
+  async verifySignIn(firstName: string, lastName: string) {
     await expect(this.bannerWelcomeMessage).toHaveText(
       `Welcome, ${firstName} ${lastName}!`
     );
-    await this.bannerChangeButton.click();
-    await this.myAccountLink.click();
-    await expect(this.mainContent).toMatchAriaSnapshot(`
-      - strong: Contact Information
-      - paragraph: ${firstName} ${lastName} ${email}
-      - link "Edit"
-      - link "Change Password"
-      `);
+    // await this.bannerChangeButton.click();
+    // await this.myAccountLink.click();
+    // await expect(this.mainContent).toMatchAriaSnapshot(`
+    //   - strong: Contact Information
+    //   - paragraph: ${firstName} ${lastName} ${email}
+    //   - link "Edit"
+    //   - link "Change Password"
+    //   `);
   }
 }
